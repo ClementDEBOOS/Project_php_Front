@@ -30,7 +30,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p, span{
   font-weight: normal;
   color:white;
 }
