@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Tiwtter from '@/components/Twitter'
+import Twitter from '@/components/Twitter'
 
 Vue.use(Router)
 

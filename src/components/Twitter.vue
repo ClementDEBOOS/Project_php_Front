@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div><Timeline :id="'twitterdev'" :sourceType="'profile'" :options="{ tweetLimit: '3' }"/></div>
 </template>
 
 <script>
