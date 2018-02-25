@@ -6,7 +6,9 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import Timeline from 'vue-tweet-embed/timeline'
+import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 Vue.use(Timeline)

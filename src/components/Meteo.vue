@@ -8,6 +8,7 @@
         </v-flex>
         <v-flex xs4 text-xs-center>
           <p class="temperature">{{day0Temperature}}°</p>
+          <button v-on:click="getBrestWeatherData()">GET DATA</button>
         </v-flex>
         <v-flex xs4>
           <h1>AUJOURD'HUI</h1>
@@ -43,7 +44,21 @@ export default {
       day0Temperature: 8,
       day1Temperature: 8,
       day2Temperature: 8,
-      day3Temperature: 8
+      day3Temperature: 8,
+      brestCityId: 6448047,
+      appId: '6958ece8f81cbd2cbca041c143226006'
+    }
+  },
+  methods: {
+    getBrestWeatherData: function () {
+      const url = 'http://api.openweathermap.org/data/2.5/forecast?id=6448047&appid=6958ece8f81cbd2cbca041c143226006'
+      this.$http.get(url).then(response => {
+        // success callback
+        // get body data
+        console.log(response.body)
+      }, response => {
+        // error callback
+      })
     }
   }
 }
