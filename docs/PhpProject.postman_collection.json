@@ -1,0 +1,86 @@
+{
+	"info": {
+		"name": "PhpProject",
+		"_postman_id": "a58bb661-0364-4dc2-ad43-35a36469b9c6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WEATHER",
+			"description": "",
+			"item": [
+				{
+					"name": "GET Current BREST weather data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?id=6448047&appid=6958ece8f81cbd2cbca041c143226006",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6448047",
+									"equals": true
+								},
+								{
+									"key": "appid",
+									"value": "6958ece8f81cbd2cbca041c143226006",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET 5 day BREST weather data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/forecast?id=6448047&appid=6958ece8f81cbd2cbca041c143226006",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6448047",
+									"equals": true
+								},
+								{
+									"key": "appid",
+									"value": "6958ece8f81cbd2cbca041c143226006",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
