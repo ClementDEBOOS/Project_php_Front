@@ -1,12 +1,26 @@
 <template>
   <v-app id="app">
-    <router-view/>
+    <meteo></meteo>
+    <actus></actus>
+    <twitter></twitter>
+    <evenements></evenements>
   </v-app>
 </template>
 
 <script>
+import Meteo from '@/components/Meteo'
+import Twitter from '@/components/Twitter'
+import Actus from '@/components/Actus'
+import Evenements from '@/components/Evenements'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'meteo': Meteo,
+    'twitter': Twitter,
+    'actus': Actus,
+    'evenements': Evenements
+  }
 }
 </script>
 
