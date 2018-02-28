@@ -1,9 +1,26 @@
 <template>
   <v-app id="app">
-    <meteo></meteo>
-    <actus></actus>
-    <twitter></twitter>
-    <evenements></evenements>
+    <v-container id="meteo" grid-list-md fluid>
+      <v-layout column>
+
+        <v-flex>
+          <v-layout row>
+            <v-flex>
+              <meteo></meteo>
+              <twitter></twitter>
+            </v-flex>
+            <v-flex>
+              <actus></actus>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+
+        <v-flex>
+          <evenements></evenements>
+        </v-flex>
+
+      </v-layout>
+    </v-container>
   </v-app>
 </template>
 
