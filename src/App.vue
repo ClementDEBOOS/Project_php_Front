@@ -6,8 +6,14 @@
         <v-flex>
           <v-layout row>
             <v-flex>
-              <meteo></meteo>
-              <twitter></twitter>
+              <v-layout column>
+                <v-flex>
+                  <meteo></meteo>
+                </v-flex>
+                <v-flex>
+                  <twitter></twitter>
+                </v-flex>
+              </v-layout>
             </v-flex>
             <v-flex>
               <actus></actus>
@@ -42,31 +48,19 @@ export default {
 </script>
 
 <style>
+  #app {
+    background-color: black;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-.background-blue2{
-  background-color:#0099bc;
-}
+  h1, h2, h3, p, span{
+    font-weight: normal;
+    color:white;
+  }
 
-.background-red{
-  background-color:#e74856;
-}
-
-.background-yellow{
-  background-color:#ffb900;
-}
-
-#app {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, p, span{
-  font-weight: normal;
-  color:white;
-}
-
-.content{
-  padding:8px;
-}
+  .content{
+    padding:8px;
+  }
 </style>
