@@ -2,8 +2,6 @@
  <v-container id="actus" grid-list-md>
     <v-layout column>
       <v-layout row wrap>
-        <v-flex xs6>
-        </v-flex>
         <v-flex xs6 text-xs-center>
           <v-carousel hide-controls hide-delimiters class="actus" interval="15000">
             <v-carousel-item v-for="(actu,i) in actus" :key="i">
