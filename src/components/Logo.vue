@@ -1,5 +1,5 @@
 <template>
-  <span id="logo">
+  <span id="logo" class="padding-5">
      <img id="logo-img" src="../assets/cesi.png"/>
   </span>
 </template>
@@ -19,7 +19,7 @@ export default {
   text-align: center;
   line-height:208px;
   padding:10px;
-  height: 208px;
+  height: 210px;
 }
 
 #logo-img{

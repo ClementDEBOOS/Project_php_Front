@@ -1,5 +1,5 @@
 <template>
-  <v-layout id="twitter" column>
+  <v-layout id="twitter" column class="padding-5">
     <v-layout row wrap>
       <v-flex xs4>
       <div v-for="(tweet,i) in tweets" :key="i">
@@ -62,7 +62,7 @@ export default {
 <style scoped>
   #twitter{
     background-color:#0099bc;
-    min-height: 416px;
+    min-height: 420px;
   }
 
   .card{

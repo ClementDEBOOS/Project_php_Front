@@ -8,15 +8,15 @@
             <v-layout row wrap>
               <v-flex d-flex xs12 lg6>
                 <v-layout column wrap>
-                  <v-flex>
+                  <v-flex class="padding-5">
                     <meteo></meteo>
                   </v-flex>
-                  <v-flex>
+                  <v-flex class="padding-5">
                     <twitter></twitter>
                   </v-flex>
                 </v-layout>
               </v-flex>
-              <v-flex d-flex xs12 lg6>
+              <v-flex d-flex xs12 lg6 class="padding-5">
                 <actus></actus>
               </v-flex>
             </v-layout>
@@ -24,10 +24,10 @@
 
           <v-flex>
             <v-layout row wrap>
-              <v-flex d-flex xs12 md10>
+              <v-flex d-flex xs12 md10 class="padding-5">
                  <evenements></evenements>
               </v-flex>
-              <v-flex d-flex xs12 md2>
+              <v-flex d-flex xs12 md2 class="padding-5">
                  <logo></logo>
               </v-flex>
             </v-layout>
@@ -72,31 +72,43 @@ export default {
     color:white;
   }
 
-  .content{
-    padding:8px;
+  .padding-5{
+    padding: 5px !important;
   }
 
   .container.grid-list-md {
-      /* padding: 10px; */
-  }
-
-  @media only screen and (max-width: 599px)
-  .container {
-      /* padding: 24px; */
+      padding: 0;
   }
 
   .container {
-      /* margin: auto; */
-      /* padding: 16px; */
+      margin: 0;
+      padding: 0;
   }
 
   .container.grid-list-md :not(:only-child) .layout:last-child {
-      /* margin-bottom: -4px; */
+      margin-bottom: 0;
   }
   .container.grid-list-md :not(:only-child) .layout:first-child {
-      /* margin-top: -4px; */
+      margin-top: 0;
   }
   .container.grid-list-md .layout:only-child {
-      /* margin: -4px; */
+      margin: 0;
   }
+
+  .container.grid-list-md .layout .flex {
+      padding: 0;
+  }
+
+  @media only screen and (min-width: 1920px){
+    ::-webkit-scrollbar {
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 599px){
+    .container {
+        padding: 0;
+    }
+  }
+
 </style>

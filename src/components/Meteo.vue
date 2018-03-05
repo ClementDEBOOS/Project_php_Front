@@ -1,5 +1,5 @@
 <template>
-  <v-layout id="meteo" column>
+  <v-layout id="meteo" column class="padding-5">
 
     <v-flex>
       <v-layout row wrap>
@@ -20,7 +20,7 @@
 
     <v-flex>
       <v-layout row wrap>
-        <v-flex xs12 md4 v-for="n in 3" :key="n">
+        <v-flex xs12 md4 v-for="n in 3" :key="n" class="padding-5">
           <v-card>
             <v-layout row wrap>
               <v-flex xl4 xs12 text-xs-center>
@@ -122,7 +122,7 @@ export default {
 
 #meteo{
   background-color:#0078d7;
-  min-height: 416px;
+  min-height: 420px;
 }
 
 .card{

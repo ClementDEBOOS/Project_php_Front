@@ -1,5 +1,5 @@
 <template>
-  <v-carousel hide-controls hide-delimiters class="evenements">
+  <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5" >
     <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
       <v-icon style="color: rgb(255, 255, 255);">keyboard_arrow_right</v-icon>
       <span class="nom-evenement">{{ evenement.nom_evenement }}</span>
@@ -35,10 +35,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.evenements{
+#evenements{
   background-color:#e74856;
   font-size: 18px;
-  height: 208px;
+  height: 210px;
 }
 
 .nom-evenement{

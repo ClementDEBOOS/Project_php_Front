@@ -1,5 +1,5 @@
 <template>
-  <v-carousel hide-controls hide-delimiters class="actus" interval="15000">
+  <v-carousel hide-controls hide-delimiters id="actus" class="padding-5" interval="15000" >
     <v-carousel-item v-for="(actu,i) in actus" :key="i">
       <span class="title-actu">{{ actu.titre_actualite }}</span>
       <v-avatar size="100px">
@@ -36,9 +36,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.actus{
+#actus{
   background-color:#ffb900;
-  min-height: 832px;
+  min-height: 840px;
 }
 
 .title-actu{
@@ -56,6 +56,10 @@ export default {
   padding-top: 10px;
   text-align: justify;
 }
+
+.carousel{
+    height: 100%;
+ }
 
 .date-actu{
   display: block;
