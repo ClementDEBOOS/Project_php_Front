@@ -1,20 +1,12 @@
 <template>
- <v-container id="evenements" grid-list-md>
-    <v-layout column>
-      <v-layout row wrap>
-        <v-flex xs9>
-          <v-carousel hide-controls hide-delimiters class="evenements">
-            <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
-              <v-icon style="color: rgb(255, 255, 255);">keyboard_arrow_right</v-icon>
-              <span class="nom-evenement">{{ evenement.nom_evenement }}</span>
-              <span class="contenu-actu">{{ evenement.lieu_evenement }}</span>
-              <span class="date-actu">du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</span>
-            </v-carousel-item>
-          </v-carousel>
-        </v-flex>
-      </v-layout>
-    </v-layout>
-  </v-container>
+  <v-carousel hide-controls hide-delimiters class="evenements">
+    <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
+      <v-icon style="color: rgb(255, 255, 255);">keyboard_arrow_right</v-icon>
+      <span class="nom-evenement">{{ evenement.nom_evenement }}</span>
+      <span class="contenu-actu">{{ evenement.lieu_evenement }}</span>
+      <span class="date-actu">du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</span>
+    </v-carousel-item>
+  </v-carousel>
 </template>
 
 <script>
@@ -46,7 +38,7 @@ export default {
 .evenements{
   background-color:#e74856;
   font-size: 18px;
-  height: auto;
+  height: 208px;
 }
 
 .nom-evenement{

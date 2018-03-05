@@ -1,22 +1,14 @@
 <template>
- <v-container id="actus" grid-list-md>
-    <v-layout column>
-      <v-layout row wrap>
-        <v-flex xs6 text-xs-center>
-          <v-carousel hide-controls hide-delimiters class="actus" interval="15000">
-            <v-carousel-item v-for="(actu,i) in actus" :key="i">
-              <span class="title-actu">{{ actu.titre_actualite }}</span>
-              <v-avatar size="100px">
-                <img :src="actu.image_url_actualite" alt="Image de l'actu">
-              </v-avatar>
-              <span class="contenu-actu">{{ actu.contenu_actualite }}</span>
-              <span class="date-actu">{{ actu.date_ajout_actualite }}</span>
-            </v-carousel-item>
-          </v-carousel>
-        </v-flex>
-      </v-layout>
-    </v-layout>
-  </v-container>
+  <v-carousel hide-controls hide-delimiters class="actus" interval="15000">
+    <v-carousel-item v-for="(actu,i) in actus" :key="i">
+      <span class="title-actu">{{ actu.titre_actualite }}</span>
+      <v-avatar size="100px">
+        <img :src="actu.image_url_actualite" alt="Image de l'actu">
+      </v-avatar>
+      <span class="contenu-actu">{{ actu.contenu_actualite }}</span>
+      <span class="date-actu">{{ actu.date_ajout_actualite }}</span>
+    </v-carousel-item>
+  </v-carousel>
 </template>
 
 <script>
@@ -46,7 +38,7 @@ export default {
 
 .actus{
   background-color:#ffb900;
-  padding: 5px;
+  min-height: 832px;
 }
 
 .title-actu{

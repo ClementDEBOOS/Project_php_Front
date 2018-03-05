@@ -1,27 +1,24 @@
 <template>
-  <v-container id="twitter" fluid grid-list-md>
-    <v-layout column>
-      <v-layout row wrap>
-        <v-flex xs4>
-        <div v-for="(tweet,i) in tweets" :key="i">
-            <h1>Name : {{ tweet.user }}</h1>
-            <h2>Text : {{ tweet.text }}</h2>
-        </div>
-        </v-flex>
-        <v-flex xs4 text-xs-center>
+  <v-layout id="twitter" column>
+    <v-layout row wrap>
+      <v-flex xs4>
+      <div v-for="(tweet,i) in tweets" :key="i">
+          <h1>Name : {{ tweet.user }}</h1>
+          <h2>Text : {{ tweet.text }}</h2>
+      </div>
+      </v-flex>
+      <v-flex xs4 text-xs-center>
 
-        </v-flex>
-        <v-flex xs4>
-          <h1></h1>
-          <h2></h2>
-        </v-flex>
-      </v-layout>
+      </v-flex>
+      <v-flex xs4>
+        <h1></h1>
+        <h2></h2>
+      </v-flex>
     </v-layout>
-  </v-container>
+  </v-layout>
 </template>
 
 <script>
-/* eslint-disable handle-callback-err */
 
 export default {
   name: 'Twitter',
@@ -48,6 +45,9 @@ export default {
         console.log(response)
       } */)
       function gotData (err, data, response) {
+        if (err) {
+          console.log(err.stack)
+        }
         console.log(data)
       }
     }
@@ -61,7 +61,8 @@ export default {
 
 <style scoped>
   #twitter{
-    background-color: #0091d7;
+    background-color:#0099bc;
+    min-height: 416px;
   }
 
   .card{

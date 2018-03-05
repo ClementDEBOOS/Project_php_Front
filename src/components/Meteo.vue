@@ -1,39 +1,46 @@
 <template>
- <v-container id="meteo" grid-list-md fluid>
-    <v-layout column>
+  <v-layout id="meteo" column>
+
+    <v-flex>
       <v-layout row wrap>
-        <v-flex xs4>
+        <v-flex md4 xs12 text-xs-center>
           <h1>AUJOURD'HUI</h1>
           <h2>BREST</h2>
         </v-flex>
-        <v-flex xs4 text-xs-center>
-          <p class="first-temperature text-xs-center">{{weatherData[0].temp}}°</p>
+        <v-flex md4 xs12 text-xs-center>
+          <p class="day-temperature text-xs-center">{{weatherData[0].temp}}°</p>
         </v-flex>
-        <v-flex xs4>
-          <svgicon :name="weatherData[0].img" class="vue-svg-big"></svgicon>
+        <v-flex md4 xs12 text-xs-center>
+          <div class="weather-icon-container">
+            <svgicon :name="weatherData[0].img" class="weather-icon-big"></svgicon>
+          </div>
         </v-flex>
       </v-layout>
-      <v-layout row wrap>
+    </v-flex>
 
-        <v-flex xs4 v-for="n in 3" :key="n">
+    <v-flex>
+      <v-layout row wrap>
+        <v-flex xs12 md4 v-for="n in 3" :key="n">
           <v-card>
             <v-layout row wrap>
-              <v-flex xs4>
+              <v-flex xl4 xs12 text-xs-center>
               {{ weatherData[n].day | capitalize }}
               </v-flex>
-              <v-flex xs4>
+              <v-flex xl4 xs12 text-xs-center>
                 <p class="other-temperature text-xs-center">{{weatherData[n].temp}}°</p>
               </v-flex>
-              <v-flex xs4>
-                <svgicon :name="weatherData[n].img" class="vue-svg-small"></svgicon>
+              <v-flex xl4 xs12 text-xs-center>
+                <div class="weather-icon-container">
+                  <svgicon :name="weatherData[n].img" class="weather-icon-small"></svgicon>
+                 </div>
               </v-flex>
             </v-layout>
           </v-card>
         </v-flex>
-
       </v-layout>
-    </v-layout>
-  </v-container>
+    </v-flex>
+
+  </v-layout>
 </template>
 
 <script>
@@ -115,6 +122,7 @@ export default {
 
 #meteo{
   background-color:#0078d7;
+  min-height: 416px;
 }
 
 .card{
@@ -123,24 +131,28 @@ export default {
   color:white;
 }
 
-.first-temperature{
-  font-size:72px;
+.day-temperature{
+  font-size:92px;
 }
 
 .other-temperature{
   font-size:42px;
 }
 
-.vue-svg-small, .vue-svg-big{
+.weather-icon-big, .weather-icon-small{
    fill: white;
    float:right;
 }
 
-.vue-svg-small{
+.weather-icon-container{
+  display:inline-block;
+}
+
+.weather-icon-small{
   width:75px;
 }
 
-.vue-svg-big{
+.weather-icon-big{
   width:150px;
 }
 
