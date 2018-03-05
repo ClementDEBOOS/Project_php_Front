@@ -122,7 +122,7 @@ export default {
 
 #meteo{
   background-color:#0078d7;
-  min-height: 420px;
+  min-height: 450px;
 }
 
 .card{

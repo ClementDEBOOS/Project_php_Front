@@ -62,7 +62,7 @@ export default {
 <style scoped>
   #twitter{
     background-color:#0099bc;
-    min-height: 420px;
+    min-height: 450px;
   }
 
   .card{

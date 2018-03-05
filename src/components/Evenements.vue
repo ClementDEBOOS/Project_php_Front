@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     getEvenements () {
-      this.$http.get('http://127.0.0.1/php_ecran_rest_api/public/evenements')
+      this.$http.get('http://127.0.0.1/project_php_Back/public/evenements')
         .then(response => {
           this.evenements = response.body
         })
@@ -38,7 +38,7 @@ export default {
 #evenements{
   background-color:#e74856;
   font-size: 18px;
-  height: 210px;
+  height: 150px;
 }
 
 .nom-evenement{

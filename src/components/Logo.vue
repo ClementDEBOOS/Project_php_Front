@@ -17,15 +17,15 @@ export default {
 #logo{
   background-color:white;
   text-align: center;
-  line-height:208px;
+  line-height:150px;
   padding:10px;
-  height: 210px;
+  height: 150px;
 }
 
 #logo-img{
   vertical-align:middle;
   width: 80%;
-  max-height: 188px;
+  max-height: 140px;
   padding: 10px;
 }
 </style>

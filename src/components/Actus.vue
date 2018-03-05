@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     getActus () {
-      this.$http.get('http://127.0.0.1/php_ecran_rest_api/public/actus')
+      this.$http.get('http://127.0.0.1/project_php_Back/public/actus')
         .then(response => {
           this.actus = response.body
         })
@@ -38,7 +38,7 @@ export default {
 
 #actus{
   background-color:#ffb900;
-  min-height: 840px;
+  min-height: 900px;
 }
 
 .title-actu{
