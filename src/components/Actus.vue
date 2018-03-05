@@ -1,14 +1,18 @@
 <template>
-  <v-carousel hide-controls hide-delimiters id="actus" class="padding-5" interval="15000" >
-    <v-carousel-item v-for="(actu,i) in actus" :key="i">
-      <span class="title-actu">{{ actu.titre_actualite }}</span>
-      <v-avatar size="100px">
-        <img :src="actu.image_url_actualite" alt="Image de l'actu">
-      </v-avatar>
-      <span class="contenu-actu">{{ actu.contenu_actualite }}</span>
-      <span class="date-actu">{{ actu.date_ajout_actualite }}</span>
-    </v-carousel-item>
-  </v-carousel>
+  <div id="actus">
+    <h1>ACTUALITES</h1>
+
+    <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
+      <v-carousel-item v-for="(actu,i) in actus" :key="i">
+        <v-avatar size="100px">
+          <img :src="actu.image_url_actualite" alt="Image de l'actu">
+        </v-avatar>
+        <h2>{{ actu.titre_actualite }}</h2>
+        <div class="contenu-actu">{{ actu.contenu_actualite }}</div>
+        <span class="date-actu">{{ actu.date_ajout_actualite }}</span>
+      </v-carousel-item>
+    </v-carousel>
+  </div>
 </template>
 
 <script>
@@ -41,19 +45,11 @@ export default {
   min-height: 900px;
 }
 
-.title-actu{
-  display: block;
-  font-size: 45px;
-}
-
 .image-actu{
   display: block;
 }
 
 .contenu-actu{
-  display: block;
-  font-size: 13px;
-  padding-top: 10px;
   text-align: justify;
 }
 

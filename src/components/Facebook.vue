@@ -1,16 +1,15 @@
 <template>
-  <v-container id="facebook" fluid grid-list-md>
-    <v-layout column>
-      <v-layout row wrap>
-        <v-flex xs4>
-          <div v-for="(post, i) in posts" :key="i">
-            <span>{{ post.created_time }}</span>
-            <p>{{ post.message }}</p>
-          </div>
-        </v-flex>
-      </v-layout>
-    </v-layout>
-  </v-container>
+  <div id="facebook" class="padding-5">
+    <h1 class="padding-5">FACEBOOK</h1>
+
+    <div class="padding-5">
+      <div v-for="(post, i) in posts" :key="i" class="post-card">
+        <div class="post-date">{{ post.created_time }}</div>
+        <div class="post-message">{{ post.message }}</div>
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -24,7 +23,7 @@ export default {
   },
   methods: {
     getPosts () {
-      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBAJEREJAMiJg3kDxRiwxZBaAoY9o0DmU99sHISuLEgbybxkdLngF0cbSbx1lwRiLqVppEDnZBMvZCexvWgwFVTQQQlPN3hpP4CCxFny1AUpN2XTzGBKcLwuEhKADGDga1AvZCLoRk9Dj2FAXwBYWMSELqYMZBZAiW6zZCMuc9YbkpvlgWUQLqGESORdsVMCd5AZDZD&limit=3')
+      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBADyPpYmtm0MK0pLXzZBzmOO0SxlACuSPqXBCokET6cMDWz3UdvHdkLaNDEYIKvoZACLNNNT6jbCKK2gz9xSN8QEnt5BebPYndDpgoqAtBZCj6ZBT75VMV97oYIj4EChTxR8XT1s7zvFyrfIQUxyt91PqSNT6x4ZAZBRdgSJz3Ns2PPWa21T7F5QdmgGvSOLAZDZD&limit=2')
         .then(response => {
           this.posts = response.body.data
         })
@@ -37,23 +36,30 @@ export default {
 </script>
 
 <style scoped>
+
   #facebook{
-    background-color: #0091d7;
+    background-color: #e9ebee;
+    max-height: 450px;
+    height:450px;
   }
 
-  .card{
-    background-color: rgba(0, 0, 0, 0.5);
-    padding:8px;
-    color:white;
-  }
-  .profile-img-card {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+  #facebook h1{
+      color:#3b5998;
+   }
+
+  #facebook .post-card{
+    border: 1px solid #dddfe2;
+    padding: 10px;
+    background-color: white;
+    color:black;
+    margin-bottom: 10px;
+    font-weight:300;
+    font-size:20px;
+    font-family:Helvetica;
+    max-height: 194px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius:5px;
   }
 
 </style>

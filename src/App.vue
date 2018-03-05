@@ -12,7 +12,7 @@
                     <meteo></meteo>
                   </v-flex>
                   <v-flex class="padding-5">
-                    <twitter></twitter>
+                    <facebook></facebook>
                   </v-flex>
                 </v-layout>
               </v-flex>
@@ -41,19 +41,19 @@
 
 <script>
 import Meteo from '@/components/Meteo'
-import Twitter from '@/components/Twitter'
 import Actus from '@/components/Actus'
 import Evenements from '@/components/Evenements'
 import Logo from '@/components/Logo'
+import Facebook from '@/components/Facebook'
 
 export default {
   name: 'App',
   components: {
     'meteo': Meteo,
-    'twitter': Twitter,
     'actus': Actus,
     'evenements': Evenements,
-    'logo': Logo
+    'logo': Logo,
+    'facebook': Facebook
   }
 }
 </script>

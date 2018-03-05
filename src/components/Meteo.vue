@@ -3,14 +3,14 @@
 
     <v-flex>
       <v-layout row wrap>
-        <v-flex md4 xs12 text-xs-center>
+        <v-flex md4 xs12 text-xs-center text-md-left class="padding-5">
           <h1>AUJOURD'HUI</h1>
           <h2>BREST</h2>
         </v-flex>
-        <v-flex md4 xs12 text-xs-center>
+        <v-flex md4 xs12 text-xs-center class="padding-5">
           <p class="day-temperature text-xs-center">{{weatherData[0].temp}}°</p>
         </v-flex>
-        <v-flex md4 xs12 text-xs-center>
+        <v-flex md4 xs12 text-xs-center text-md-right class="padding-5">
           <div class="weather-icon-container">
             <svgicon :name="weatherData[0].img" class="weather-icon-big"></svgicon>
           </div>
