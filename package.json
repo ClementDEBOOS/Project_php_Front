@@ -16,6 +16,7 @@
   "dependencies": {
     "twit": "^2.2.9",
     "vue": "^2.5.2",
+    "vue-moment": "^3.2.0",
     "vue-resource": "^1.4.0",
     "vue-router": "^3.0.1",
     "vue-tweet-embed": "^2.1.1",

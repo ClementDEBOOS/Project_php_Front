@@ -19,7 +19,7 @@
           <v-card>
             <v-layout row wrap>
               <v-flex xs4>
-              LUNDI
+              {{ weatherData[n].day | capitalize }}
               </v-flex>
               <v-flex xs4>
                 <p class="other-temperature text-xs-center">{{weatherData[n].temp}}°</p>
@@ -38,6 +38,7 @@
 
 <script>
 import '../icons'
+import moment from 'moment'
 
 export default {
   name: 'Meteo',
@@ -53,22 +54,38 @@ export default {
       this.$http.get('http://api.openweathermap.org/data/2.5/forecast?id=' + this.brestCityId + '&appid=' + this.appId).then(response => {
         // success callback
         // get body data
+        console.log(response.body)
         let data = response.body
         let day0 = data.list[0]
         let day1 = data.list[8]
         let day2 = data.list[16]
         let day3 = data.list[24]
-        //  const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
 
         // List of objects {temperature, image}
         // today
-        this.weatherData.push({temp: this.kelvinToCelsius(day0.main.temp), img: day0.weather[0].main})
+        this.weatherData.push({
+          temp: this.kelvinToCelsius(day0.main.temp),
+          img: day0.weather[0].main,
+          day: moment(day0.dt_txt, 'YYYY-MM-DD HH:mm:ss', 'fr').format('dddd')
+        })
         // day + 1
-        this.weatherData.push({temp: this.kelvinToCelsius(day1.main.temp), img: day1.weather[0].main})
+        this.weatherData.push({
+          temp: this.kelvinToCelsius(day1.main.temp),
+          img: day1.weather[0].main,
+          day: moment(day1.dt_txt, 'YYYY-MM-DD HH:mm:ss', 'fr').format('dddd')
+        })
         // day + 2
-        this.weatherData.push({temp: this.kelvinToCelsius(day2.main.temp), img: day2.weather[0].main})
+        this.weatherData.push({
+          temp: this.kelvinToCelsius(day2.main.temp),
+          img: day2.weather[0].main,
+          day: moment(day2.dt_txt, 'YYYY-MM-DD HH:mm:ss', 'fr').format('dddd')
+        })
         // day + 3
-        this.weatherData.push({temp: this.kelvinToCelsius(day3.main.temp), img: day3.weather[0].main})
+        this.weatherData.push({
+          temp: this.kelvinToCelsius(day3.main.temp),
+          img: day3.weather[0].main,
+          day: moment(day3.dt_txt, 'YYYY-MM-DD HH:mm:ss', 'fr').format('dddd')
+        })
 
         console.log(this.weatherData)
       }, response => {
@@ -81,6 +98,14 @@ export default {
   },
   mounted: function () {
     this.getBrestWeatherData()
+  },
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      // return value.charAt(0).toUpperCase() + value.slice(1)
+      return value.toUpperCase()
+    }
   }
 }
 </script>
