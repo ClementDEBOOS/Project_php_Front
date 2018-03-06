@@ -5,7 +5,7 @@
     </v-flex>
     <v-flex>
       <div class="actu-content ellipsis-container">
-        <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
+        <v-carousel hide-controls hide-delimiters class="padding-5" interval="8000" text-center>
           <v-carousel-item v-for="(actu,i) in actus" :key="i">
             <v-avatar size="400px">
               <img id="actu-image" :src="'static/img/' + actu.image_url_actualite" alt="Image de l'actu"/>
