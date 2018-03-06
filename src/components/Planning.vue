@@ -1,13 +1,33 @@
 <template>
-  <div id="planning" class="planning">
-    <div class="content">
-      <img src="static/img/planning.PNG" />
-    </div>
-    <div class="footer">
-      <evenements></evenements>
-      <logo></logo>
-    </div>
-  </div>
+  <v-app id="app">
+    <v-content>
+      <v-container grid-list-md fluid>
+        <v-layout column wrap>
+          <v-flex>
+            <v-layout row wrap>
+              <v-flex d-flex xs12 lg6 class="padding-5">
+                <div id="planning" class="planning">
+                  <div class="content">
+                    <img src="static/img/planning.PNG" />
+                  </div>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <v-flex>
+            <v-layout row wrap>
+              <v-flex d-flex xs12 md10 class="padding-5">
+                <evenements></evenements>
+              </v-flex>
+              <v-flex d-flex xs12 md2 class="padding-5">
+                <logo></logo>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
@@ -32,6 +52,6 @@ export default {
 .content{
   width:100%;
   height: 100%;
-  background: #fff;
+  background: black;
 }
 </style>
