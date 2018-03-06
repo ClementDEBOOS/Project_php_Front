@@ -2,18 +2,20 @@
   <div id="actus" class="padding-5">
     <h1 class="padding-5">ACTUALITES</h1>
 
-    <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
-      <v-carousel-item v-for="(actu,i) in actus" :key="i">
-        <v-avatar size="400px" text-center>
-          <img :src="actu.image_url_actualite" alt="Image de l'actu">
-        </v-avatar>
+    <div class="actu-content">
+      <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
+        <v-carousel-item v-for="(actu,i) in actus" :key="i">
+          <v-avatar size="400px" text-center>
+            <img :src="actu.image_url_actualite" alt="Image de l'actu">
+          </v-avatar>
 
-        <div class="contenu-actu">
-          <h2>{{ actu.titre_actualite }}</h2>
-          {{ actu.contenu_actualite }}
-        </div>
-      </v-carousel-item>
-    </v-carousel>
+          <div class="actu-text">
+            <h2>{{ actu.titre_actualite }}</h2>
+            {{ actu.contenu_actualite }}
+          </div>
+        </v-carousel-item>
+      </v-carousel>
+    </div>
   </div>
 </template>
 
@@ -27,7 +29,7 @@ export default {
   },
   methods: {
     getActus () {
-      this.$http.get('http://127.0.0.1/project_php_Back/public/actus')
+      this.$http.get('http://app-3e76fc09-b9d1-4f53-8bfb-b4f7730fc090.cleverapps.io/public/actus')
         .then(response => {
           this.actus = response.body
         })
@@ -47,17 +49,22 @@ export default {
   min-height: 900px;
 }
 
-.image-actu{
+.actu-image{
   display: block;
 }
 
-.contenu-actu{
+.actu-text{
   text-align: justify;
   text-align-last: center;
 }
 
 .carousel{
     height: 100%;
+ }
+
+ .actu-content{
+   display:flex;
+   flex:1.1;
  }
 
 .card{
