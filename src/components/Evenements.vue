@@ -36,7 +36,7 @@ export default {
 
 #evenements{
   background-color:#e74856;
-  font-size: 28px;
+  font-size: 36px;
   height: 150px;
   color:white;
   font-weight:300;

@@ -72,13 +72,13 @@ export default {
     color:white;
   }
   h1{
-    font-size: 24px;
+    font-size: 30px;
   }
   h2{
-    font-size: 22px;
+    font-size: 26px;
   }
   h3{
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .padding-5{

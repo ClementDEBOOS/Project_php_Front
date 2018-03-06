@@ -57,6 +57,7 @@ export default {
   text-align: justify;
   text-align-last: center;
   font-weight: 300;
+  font-size:26px;
 }
 
 .actu-text h2{
