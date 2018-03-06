@@ -24,7 +24,7 @@ export default {
 
 #logo-img{
   vertical-align:middle;
-  width: 80%;
+  width: auto;
   max-height: 140px;
   padding: 10px;
 }
