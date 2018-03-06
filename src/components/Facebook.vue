@@ -4,7 +4,7 @@
 
     <div class="padding-5">
       <div v-for="(post, i) in posts" :key="i" class="post-card">
-        <div class="post-date">{{ post.created_time }}</div>
+        <div class="post-date">{{getMomentDate(post.created_time)}}</div>
         <div class="post-message">{{ post.message }}</div>
       </div>
     </div>
@@ -14,6 +14,9 @@
 
 <script>
 
+import * as moment from 'moment'
+import 'moment/locale/fr'
+moment.locale('fr')
 export default {
   name: 'Facebook',
   data () {
@@ -23,14 +26,21 @@ export default {
   },
   methods: {
     getPosts () {
-      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBAD68gzZBsdLNZAgusZCPFkoHcZB8gFGu9ltr8LGeAlSpH59ahRVZC0QqGIZBg2xJAlzZBtuZASme1urI9bnAVDHsROLJh6QAV66Fh49aWZA8ZBWHDGLhiX0TZAZBQpk2tOewZBPVTw8oUVO2NLeSlLzcKKjjrAv0X2zZBmxXJzgP7AJ0Qgwzs1ZAxxZCaHy1rZAsdV7CqggZDZD&limit=2')
+      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBANZAc4WrNjy1bzfPhVA0cl1z1t0GrYY2ZCojNe0fQNXGeZCKD5stYsdKKNoRCZA43ZBbSBhjaaSjDAoYoI5Ewlwcsnv3LiHkj94UotOwhzdoOlhXisK6vivUmDk9DSaVu40FoZAfZCHWv89ZAOmy384DBwHaiDja0XTDFNEeEMZBq2aJe8yQuM2L9yPFJnqZCZAkQZDZD&limit=2')
         .then(response => {
           this.posts = response.body.data
         })
+    },
+    getMomentDate: (date) => {
+      return moment(date).calendar().toUpperCase()
     }
+
   },
   mounted () {
     this.getPosts()
+  },
+
+  computed: {
   }
 }
 </script>

@@ -6,7 +6,9 @@ import Timeline from 'vue-tweet-embed/timeline'
 import VueResource from 'vue-resource'
 import * as svgicon from 'vue-svgicon'
 import VueMoment from 'vue-moment'
+import * as moment from 'moment'
 
+Vue.use(moment)
 Vue.use(VueMoment)
 Vue.use(VueResource)
 Vue.config.productionTip = false
