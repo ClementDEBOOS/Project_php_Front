@@ -1,6 +1,8 @@
 <template>
   <div id="facebook" class="padding-5">
-    <h1 class="padding-5">FACEBOOK</h1>
+    <v-flex md4 xs12 text-xs-center text-md-left class="padding-5">
+      <h1 class="padding-5">FACEBOOK</h1>
+    </v-flex>
 
     <div class="padding-5">
       <div v-for="(post, i) in posts" :key="i" class="post-card">

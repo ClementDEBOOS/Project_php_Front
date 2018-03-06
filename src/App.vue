@@ -133,4 +133,14 @@ export default {
       color: white;
   }
 
+  .ellipsis-container{
+    min-width: 0;
+  }
+
+  .ellipsis-text{
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
 </style>
