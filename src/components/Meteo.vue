@@ -24,7 +24,7 @@
           <v-card>
             <v-layout row wrap>
               <v-flex xl4 xs12 text-xs-center>
-              {{ weatherData[n].day | capitalize }}
+                <h3>{{ weatherData[n].day | capitalize }}</h3>
               </v-flex>
               <v-flex xl4 xs12 text-xs-center>
                 <p class="other-temperature text-xs-center">{{weatherData[n].temp}}°</p>

@@ -1,12 +1,11 @@
 <template>
   <div id="actus" class="padding-5">
     <h1 class="padding-5">ACTUALITES</h1>
-
     <div class="actu-content">
       <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
         <v-carousel-item v-for="(actu,i) in actus" :key="i">
-          <v-avatar size="400px" text-center>
-            <img :src="'../assets/' + actu.image_url_actualite" alt="Image de l'actu">
+          <v-avatar size="400px">
+            <img id="image_actu" :src="'static/' + actu.image_url_actualite" alt="Image de l'actu"/>
           </v-avatar>
 
           <div class="actu-text">
@@ -49,7 +48,7 @@ export default {
   min-height: 900px;
 }
 
-.actu-image{
+.image_actu{
   display: block;
 }
 
@@ -57,7 +56,6 @@ export default {
   text-align: justify;
   text-align-last: center;
   font-weight: 300;
-  font-size:26px;
 }
 
 .actu-text h2{
@@ -70,6 +68,7 @@ export default {
 
  .actu-content{
    max-height: 843px;
+   text-align: center;
  }
 
 .card{
