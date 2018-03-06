@@ -69,7 +69,7 @@ export default {
  }
 
  .actu-content{
-   max-height: 813px;
+   max-height: 825px;
    text-align: center;
  }
 
