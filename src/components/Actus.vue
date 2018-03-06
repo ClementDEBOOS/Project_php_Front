@@ -6,7 +6,7 @@
       <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
         <v-carousel-item v-for="(actu,i) in actus" :key="i">
           <v-avatar size="400px" text-center>
-            <img :src="actu.image_url_actualite" alt="Image de l'actu">
+            <img :src="'../assets/' + actu.image_url_actualite" alt="Image de l'actu">
           </v-avatar>
 
           <div class="actu-text">
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     getActus () {
-      this.$http.get('http://app-3e76fc09-b9d1-4f53-8bfb-b4f7730fc090.cleverapps.io/public/actus')
+      this.$http.get('http://ecran-php.cleverapps.io/public/actus')
         .then(response => {
           this.actus = response.body
         })
@@ -56,6 +56,11 @@ export default {
 .actu-text{
   text-align: justify;
   text-align-last: center;
+  font-weight: 300;
+}
+
+.actu-text h2{
+  text-transform: uppercase;
 }
 
 .carousel{
@@ -63,8 +68,7 @@ export default {
  }
 
  .actu-content{
-   display:flex;
-   flex:1.1;
+   max-height: 843px;
  }
 
 .card{

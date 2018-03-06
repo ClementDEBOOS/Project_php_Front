@@ -19,7 +19,7 @@ export default {
   methods: {
     getEvenements () {
     // http://192.168.43.76:8081/project_php_Back-master
-      this.$http.get('http://app-3e76fc09-b9d1-4f53-8bfb-b4f7730fc090.cleverapps.io/public/evenements')
+      this.$http.get('http://ecran-php.cleverapps.io/public/evenements')
         .then(response => {
           this.evenements = response.body
         })

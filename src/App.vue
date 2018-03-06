@@ -71,6 +71,15 @@ export default {
     font-weight: normal;
     color:white;
   }
+  h1{
+    font-size: 24px;
+  }
+  h2{
+    font-size: 22px;
+  }
+  h3{
+    font-size: 20px;
+  }
 
   .padding-5{
     padding: 5px !important;
