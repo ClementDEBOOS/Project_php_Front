@@ -1,15 +1,17 @@
 <template>
-  <div id="actus">
-    <h1>ACTUALITES</h1>
+  <div id="actus" class="padding-5">
+    <h1 class="padding-5">ACTUALITES</h1>
 
     <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
       <v-carousel-item v-for="(actu,i) in actus" :key="i">
-        <v-avatar size="100px">
+        <v-avatar size="400px" text-center>
           <img :src="actu.image_url_actualite" alt="Image de l'actu">
         </v-avatar>
-        <h2>{{ actu.titre_actualite }}</h2>
-        <div class="contenu-actu">{{ actu.contenu_actualite }}</div>
-        <span class="date-actu">{{ actu.date_ajout_actualite }}</span>
+
+        <div class="contenu-actu">
+          <h2>{{ actu.titre_actualite }}</h2>
+          {{ actu.contenu_actualite }}
+        </div>
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -51,17 +53,12 @@ export default {
 
 .contenu-actu{
   text-align: justify;
+  text-align-last: center;
 }
 
 .carousel{
     height: 100%;
  }
-
-.date-actu{
-  display: block;
-  text-align: right;
-  font-size: 10px;
-}
 
 .card{
   background-color: rgba(0, 0, 0, 0.5);

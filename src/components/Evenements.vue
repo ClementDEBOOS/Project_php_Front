@@ -1,10 +1,8 @@
 <template>
-  <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5" >
+  <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5">
     <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
-      <v-icon style="color: rgb(255, 255, 255);">keyboard_arrow_right</v-icon>
-      <span class="nom-evenement">{{ evenement.nom_evenement }}</span>
-      <span class="contenu-actu">{{ evenement.lieu_evenement }}</span>
-      <span class="date-actu">du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</span>
+      <v-icon color="white" size="100px">keyboard_arrow_right</v-icon>
+      <span class="nom-evenement">{{ evenement.nom_evenement }}</span> {{ evenement.lieu_evenement }} du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -37,27 +35,15 @@ export default {
 
 #evenements{
   background-color:#e74856;
-  font-size: 18px;
+  font-size: 28px;
   height: 150px;
+  color:white;
+  line-height: 150px;
+  text-overflow: ellipsis;
 }
 
 .nom-evenement{
-  display: inline;
   font-weight: bold;
-}
-
-.lieu-evenement{
-  display: inline;
-}
-
-.date-evenement{
-  display: inline;
-}
-
-.card{
-  background-color: rgba(0, 0, 0, 0.5);
-  padding:8px;
-  color:white;
 }
 
 </style>

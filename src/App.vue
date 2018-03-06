@@ -111,4 +111,17 @@ export default {
     }
   }
 
+  .carousel {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  }
+
+  .application .theme--light.jumbotron__content, .theme--light .jumbotron__content {
+      color: white;
+  }
+
 </style>

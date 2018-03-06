@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getPosts () {
-      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBADyPpYmtm0MK0pLXzZBzmOO0SxlACuSPqXBCokET6cMDWz3UdvHdkLaNDEYIKvoZACLNNNT6jbCKK2gz9xSN8QEnt5BebPYndDpgoqAtBZCj6ZBT75VMV97oYIj4EChTxR8XT1s7zvFyrfIQUxyt91PqSNT6x4ZAZBRdgSJz3Ns2PPWa21T7F5QdmgGvSOLAZDZD&limit=2')
+      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBAKvllgP9EbqSq2Rq3JayVcjLhmYLPmOxiBqOnUxlO36XEaU0JunVbABhHsFQH3Io5N84Jp8Gh92olPp4aNcVMxLLgcTzRgUF1d9TIwapuKoORrvZBcLKkCpqBhRkVyZB5NrtvoXZBIWt6l4sqZCvtjVA9rbBkDjZAqzj4iefZAZBp7kt5H3NKsZCEekfaaIm1gZDZD&limit=2')
         .then(response => {
           this.posts = response.body.data
         })
