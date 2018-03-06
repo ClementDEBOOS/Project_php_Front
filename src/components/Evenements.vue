@@ -34,7 +34,7 @@ export default {
         })
     },
     getMomentDate: (date) => {
-      return moment(date).calendar().toUpperCase()
+      return moment(date).format('LLLL')
     }
   },
   mounted () {
