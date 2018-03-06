@@ -58,6 +58,7 @@ export default {
   font-weight: 300;
   font-size:26px;
   margin-top: 30px;
+  padding: 10px;
 }
 
 .actu-text h2{

@@ -6,7 +6,7 @@
           <v-icon color="white" size="140px">keyboard_arrow_right</v-icon>
         </v-flex>
         <v-flex xs11 text-xs-left>
-          <span class="event-text"><span class="nom-evenement">{{ evenement.nom_evenement }}</span> {{ evenement.lieu_evenement }} du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</span>
+          <div class="event-text"><span class="nom-evenement">{{ evenement.nom_evenement }}</span> {{ evenement.lieu_evenement }} du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</div>
         </v-flex>
       </v-layout>
     </v-carousel-item>
@@ -53,11 +53,15 @@ export default {
 }
 
 .event-text{
-  vertical-align: middle;
+  vertical-align:middle;
+  display:inline-block;
+  line-height:1.2;
+  padding: 10px;
 }
 
 .event-content{
   height: inherit;
+  line-height:150px;
 }
 
 </style>
