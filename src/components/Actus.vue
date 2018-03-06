@@ -55,7 +55,7 @@ export default {
 .actu-text{
   text-align: justify;
   text-align-last: center;
-  font-weight: 300;
+  font-weight: 400;
   font-size:26px;
   margin-top: 30px;
   padding: 10px;
@@ -63,6 +63,7 @@ export default {
 
 .actu-text h2{
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .carousel{
