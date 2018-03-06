@@ -1,6 +1,6 @@
 <template>
-  <span id="logo" class="padding-5">
-     <img id="logo-img" src="../assets/cesi.png"/>
+  <span id="logo">
+     <img id="logo-img" src="../assets/logo_cesi.jpg"/>
   </span>
 </template>
 
@@ -19,7 +19,7 @@ export default {
   text-align: center;
   line-height:150px;
   padding:10px;
-  height: 150px;
+  max-height: 150px;
 }
 
 #logo-img{
@@ -27,5 +27,18 @@ export default {
   width: 80%;
   max-height: 140px;
   padding: 10px;
+}
+
+@media only screen and (max-width: 959px){
+  #logo{
+    line-height: none;
+    max-height: 100%;
+  }
+
+  #logo-img{
+    vertical-align:middle;
+    width: 100px;
+    padding: 10px;
+  }
 }
 </style>
