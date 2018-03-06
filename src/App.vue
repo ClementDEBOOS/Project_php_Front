@@ -1,7 +1,7 @@
 <template>
   <v-app id="app">
     <v-content>
-      <v-carousel hide-controls hide-delimiters id="evenements" interval="25000" class="padding-5">
+      <v-carousel hide-controls hide-delimiters id="application" interval="25000" class="padding-5">
         <v-carousel-item>
           <informations></informations>
         </v-carousel-item>
