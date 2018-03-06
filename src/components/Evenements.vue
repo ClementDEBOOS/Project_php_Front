@@ -1,8 +1,10 @@
 <template>
   <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5">
     <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
-      <v-icon color="white" size="150px">keyboard_arrow_right</v-icon>
-      <div class="event-text"><span class="nom-evenement">{{ evenement.nom_evenement }}</span> {{ evenement.lieu_evenement }} du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</div>
+      <div class="event-content">
+        <v-icon color="white" size="150px">keyboard_arrow_right</v-icon>
+        <span class="event-text"><span class="nom-evenement">{{ evenement.nom_evenement }}</span> {{ evenement.lieu_evenement }} du {{ evenement.date_debut_evenement }} au {{ evenement.date_fin_evenement }}</span>
+      </div>
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -47,7 +49,11 @@ export default {
 }
 
 .event-text{
-  display: inline;
+
+}
+
+.event-content{
+  vertical-align:middle;
 }
 
 </style>

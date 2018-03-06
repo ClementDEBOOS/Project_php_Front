@@ -5,7 +5,7 @@
       <v-carousel hide-controls hide-delimiters class="padding-5" interval="15000" text-center>
         <v-carousel-item v-for="(actu,i) in actus" :key="i">
           <v-avatar size="400px">
-            <img id="actu-image" :src="'static/' + actu.image_url_actualite" alt="Image de l'actu"/>
+            <img id="actu-image" :src="'static/img/' + actu.image_url_actualite" alt="Image de l'actu"/>
           </v-avatar>
 
           <div class="actu-text ellipsis-text">
@@ -57,6 +57,7 @@ export default {
   text-align-last: center;
   font-weight: 300;
   font-size:26px;
+  margin-top: 30px;
 }
 
 .actu-text h2{
@@ -68,7 +69,7 @@ export default {
  }
 
  .actu-content{
-   max-height: 843px;
+   max-height: 813px;
    text-align: center;
  }
 

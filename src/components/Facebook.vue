@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getPosts () {
-      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBAKvllgP9EbqSq2Rq3JayVcjLhmYLPmOxiBqOnUxlO36XEaU0JunVbABhHsFQH3Io5N84Jp8Gh92olPp4aNcVMxLLgcTzRgUF1d9TIwapuKoORrvZBcLKkCpqBhRkVyZB5NrtvoXZBIWt6l4sqZCvtjVA9rbBkDjZAqzj4iefZAZBp7kt5H3NKsZCEekfaaIm1gZDZD&limit=2')
+      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBABfwKUwfZCZCkA8Xjtnp015v3z5bO0knRtW5oXJNz55oTqgEBYTAfbxhG8CYA9d9CHKcPLnEmnCp2oSZCZBndeMwTC83ORoUr7S6CuMoVF8h3umfobkIUrmLoFFCxoADLZBYuWnsbPtnfvkmPfY3VeGnkA9y6VIxlHpNtM0ElbqYfdxvYh4dJHf4KvHpJvAZDZD&limit=2')
         .then(response => {
           this.posts = response.body.data
         })
@@ -68,7 +68,7 @@ export default {
     font-weight:300;
     font-size:20px;
     font-family:Helvetica;
-    max-height: 194px;
+    max-height: 177px;
     text-overflow: ellipsis;
     overflow: hidden;
     border-radius:5px;
