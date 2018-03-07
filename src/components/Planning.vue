@@ -22,18 +22,18 @@ export default {
 </script>
 
 <style scoped>
-#planning{
-  height: 930px;
-}
+  #planning{
+    max-height: 910px;
+    height:910px;
+  }
 
-.planning-content{
-  text-align: center;
-  height: 100%;
-  background: white;
-}
+  .planning-content{
+    text-align: center;
+    height: 100%;
+    background: white;
+  }
 
-.planning-content img{
-  height:100%;
-}
-
+  .planning-content img{
+    height:100%;
+  }
 </style>

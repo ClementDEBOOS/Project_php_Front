@@ -1,6 +1,6 @@
 <template>
   <!-- Défilement des évenements -->
-  <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5">
+  <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5" reverse-transition>
     <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
       <v-layout row wrap class="event-content">
         <v-flex xs1 text-xs-center>
