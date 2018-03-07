@@ -1,4 +1,5 @@
 <template>
+  <!-- Défilement des évenements -->
   <v-carousel hide-controls hide-delimiters id="evenements" class="padding-5">
     <v-carousel-item v-for="(evenement,i) in evenements" :key="i">
       <v-layout row wrap class="event-content">
@@ -26,11 +27,11 @@ export default {
     }
   },
   methods: {
+    // Récupération des évenements
     getEvenements () {
-    // http://192.168.43.76:8081/project_php_Back-master
       this.$http.get('http://ecran-php.cleverapps.io/public/evenements')
         .then(response => {
-          this.evenements = response.body
+          this.evenements = response.body // On insére les données récupérées dans la variable 'evenements'
         })
     },
     getMomentDate: (date) => {
