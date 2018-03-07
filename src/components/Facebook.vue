@@ -1,5 +1,6 @@
 <template>
   <div id="facebook">
+
     <div class="facebook-container">
       <div class="facebook-banner">
       </div>
@@ -19,20 +20,21 @@
 </template>
 
 <script>
-
 import * as moment from 'moment'
 import 'moment/locale/fr'
 moment.locale('fr')
+
 export default {
   name: 'Facebook',
   data () {
     return {
-      posts: []
+      posts: [],
+      accessToken: 'EAACEdEose0cBAKWVxZBJLNmHb1b7oZBeIQ7IA1f9o2k67WhlUjbvP5tZAwKAP4sprxsk3s2wt2VxgElvfQkMbSRW0WTjGJvZBmZAt3zxV9V6iTGsQScnHxzUKFqYoMacFSnWCtoZCmGlsSqQLJIZCP7xSrwacBB1J8gr6NAsJs91mCfpSgBJaApp79ZAJ4YMhZCxAahpsrLD27AZDZD'
     }
   },
   methods: {
     getPosts () {
-      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=EAACEdEose0cBAKWVxZBJLNmHb1b7oZBeIQ7IA1f9o2k67WhlUjbvP5tZAwKAP4sprxsk3s2wt2VxgElvfQkMbSRW0WTjGJvZBmZAt3zxV9V6iTGsQScnHxzUKFqYoMacFSnWCtoZCmGlsSqQLJIZCP7xSrwacBB1J8gr6NAsJs91mCfpSgBJaApp79ZAJ4YMhZCxAahpsrLD27AZDZD&limit=2')
+      this.$http.get('https://graph.facebook.com/v2.12/campus.cesi.brest/posts/?access_token=' + this.accessToken + '&limit=2')
         .then(response => {
           this.posts = response.body.data
         })

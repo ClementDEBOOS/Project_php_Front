@@ -24,7 +24,7 @@
           <v-card>
             <v-layout row wrap>
               <v-flex xl4 xs12 text-xs-center>
-                <h3>{{ weatherData[n].day | capitalize }}</h3>
+                <h3 class="capitalize">{{ weatherData[n].day }}</h3>
               </v-flex>
               <v-flex xl4 xs12 text-xs-center>
                 <p class="other-temperature text-xs-center">{{weatherData[n].temp}}°</p>
@@ -105,19 +105,10 @@ export default {
   },
   mounted: function () {
     this.getBrestWeatherData()
-  },
-  filters: {
-    capitalize: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      // return value.charAt(0).toUpperCase() + value.slice(1)
-      return value.toUpperCase()
-    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 #meteo{
