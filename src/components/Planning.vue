@@ -8,7 +8,7 @@
               <v-flex d-flex xs12 lg6 class="padding-5">
                 <div id="planning" class="planning">
                   <div class="content">
-                    <img src="static/img/planning.PNG" />
+                    <img src="static/img/planning_mod.png" />
                   </div>
                 </div>
               </v-flex>
@@ -50,7 +50,6 @@ export default {
   text-align: center;
 }
 .content{
-  width:100%;
   height: 100%;
   background: black;
 }
