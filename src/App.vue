@@ -1,14 +1,31 @@
 <template>
   <v-app id="app">
-    <v-content>
-      <v-carousel hide-controls hide-delimiters id="application" interval="25000" class="padding-5">
-        <v-carousel-item>
-          <informations></informations>
-        </v-carousel-item>
-        <v-carousel-item>
-          <planning></planning>
-        </v-carousel-item>
-      </v-carousel>
+      <v-content>
+        <v-container grid-list-md fluid>
+          <v-layout column wrap>
+            <v-flex>
+              <v-carousel hide-controls hide-delimiters id="application" interval="25000">
+                <v-carousel-item>
+                  <informations></informations>
+                </v-carousel-item>
+                <v-carousel-item>
+                  <planning></planning>
+                </v-carousel-item>
+              </v-carousel>
+            </v-flex>
+
+            <v-flex>
+              <v-layout row wrap>
+                <v-flex d-flex xs12 md10 class="padding-5">
+                   <evenements></evenements>
+                </v-flex>
+                <v-flex d-flex xs12 md2 class="padding-5">
+                   <logo></logo>
+                </v-flex>
+              </v-layout>
+            </v-flex>
+        </v-layout>
+      </v-container>
     </v-content>
   </v-app>
 </template>
@@ -16,12 +33,16 @@
 <script>
 import Informations from '@/components/Informations'
 import Planning from '@/components/Planning'
+import Evenements from '@/components/Evenements'
+import Logo from '@/components/Logo'
 
 export default {
   name: 'App',
   components: {
     'informations': Informations,
-    'planning': Planning
+    'planning': Planning,
+    'evenements': Evenements,
+    'logo': Logo
   }
 }
 </script>
