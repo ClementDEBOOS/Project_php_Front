@@ -8,7 +8,7 @@
               <v-flex d-flex xs12 lg6 class="padding-5">
                 <div id="planning" class="planning">
                   <div class="content">
-                    <img src="static/img/planning_mod.png" />
+                    <img src="static/img/planning_refactor.png" />
                   </div>
                 </div>
               </v-flex>
@@ -46,7 +46,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .planning{
-  height: 930px;
+  height: 100%;
+  background-color: white;
   text-align: center;
 }
 .content{
