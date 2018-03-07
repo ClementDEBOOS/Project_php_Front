@@ -27,6 +27,8 @@ export default {
 </script>
 
 <style>
+
+  /* THEME */
   #app {
     overflow: hidden;
     background-color: black;
@@ -49,56 +51,57 @@ export default {
     font-size: 24px;
   }
 
-  .padding-5{
-    padding: 5px !important;
-  }
-
   .container.grid-list-md {
-      padding: 0;
-  }
-
-  .container {
-      margin: 0;
-      padding: 0;
-  }
-
-  .container.grid-list-md :not(:only-child) .layout:last-child {
-      margin-bottom: 0;
-  }
-  .container.grid-list-md :not(:only-child) .layout:first-child {
-      margin-top: 0;
-  }
-  .container.grid-list-md .layout:only-child {
-      margin: 0;
-  }
-
-  .container.grid-list-md .layout .flex {
-      padding: 0;
-  }
-
-  @media only screen and (min-width: 1920px){
-    ::-webkit-scrollbar {
-        display: none;
-    }
-  }
-
-  @media only screen and (max-width: 599px){
-    .container {
         padding: 0;
     }
-  }
 
-  .carousel {
-      height: 100%;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-  }
+    .container {
+        margin: 0;
+        padding: 0;
+    }
 
-  .application .theme--light.jumbotron__content, .theme--light .jumbotron__content {
-      color: white;
+    .container.grid-list-md :not(:only-child) .layout:last-child {
+        margin-bottom: 0;
+    }
+    .container.grid-list-md :not(:only-child) .layout:first-child {
+        margin-top: 0;
+    }
+    .container.grid-list-md .layout:only-child {
+        margin: 0;
+    }
+
+    .container.grid-list-md .layout .flex {
+        padding: 0;
+    }
+
+    @media only screen and (min-width: 1920px){
+      ::-webkit-scrollbar {
+          display: none;
+      }
+    }
+
+    @media only screen and (max-width: 599px){
+      .container {
+          padding: 0;
+      }
+    }
+
+    .carousel {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .application .theme--light.jumbotron__content, .theme--light .jumbotron__content {
+        color: white;
+    }
+
+  /* UTIL */
+  .padding-5{
+    padding: 5px !important;
   }
 
   .ellipsis-container{
@@ -109,6 +112,10 @@ export default {
     width:100%;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .capitalize{
+    text-transform: uppercase;
   }
 
 </style>

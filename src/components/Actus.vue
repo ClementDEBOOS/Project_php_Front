@@ -7,6 +7,7 @@
       <div class="actu-content ellipsis-container">
         <v-carousel hide-controls hide-delimiters class="padding-5" interval="8000" text-center>
           <v-carousel-item v-for="(actu,i) in actus" :key="i">
+
             <v-avatar size="400px">
               <img id="actu-image" :src="'static/img/' + actu.image_url_actualite" alt="Image de l'actu"/>
             </v-avatar>
@@ -15,6 +16,7 @@
               <h2>{{ actu.titre_actualite }}</h2>
               {{ actu.contenu_actualite }}
             </div>
+
           </v-carousel-item>
         </v-carousel>
       </div>
@@ -44,7 +46,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 #actus{
