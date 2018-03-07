@@ -5,6 +5,7 @@
     </v-flex>
     <v-flex>
       <div class="actu-content ellipsis-container">
+        <!-- Défilement des actus -->
         <v-carousel hide-controls hide-delimiters class="padding-5" interval="8000" text-center>
           <v-carousel-item v-for="(actu,i) in actus" :key="i">
 
@@ -33,10 +34,11 @@ export default {
     }
   },
   methods: {
+    // Récupération des actus
     getActus () {
       this.$http.get('http://ecran-php.cleverapps.io/public/actus')
         .then(response => {
-          this.actus = response.body
+          this.actus = response.body // On insére les données récupérées dans la variable 'actus'
         })
     }
   },
@@ -47,7 +49,6 @@ export default {
 </script>
 
 <style scoped>
-
 #actus{
   background-color:#ffb900;
   min-height: 900px;
