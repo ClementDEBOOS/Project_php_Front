@@ -29,7 +29,7 @@ export default {
   data () {
     return {
       posts: [],
-      accessToken: 'EAACEdEose0cBAKWVxZBJLNmHb1b7oZBeIQ7IA1f9o2k67WhlUjbvP5tZAwKAP4sprxsk3s2wt2VxgElvfQkMbSRW0WTjGJvZBmZAt3zxV9V6iTGsQScnHxzUKFqYoMacFSnWCtoZCmGlsSqQLJIZCP7xSrwacBB1J8gr6NAsJs91mCfpSgBJaApp79ZAJ4YMhZCxAahpsrLD27AZDZD'
+      accessToken: 'EAACEdEose0cBAPae162HZAQi5qo1sAuQxjEwlxlcSuZAI0Xw6LZChIvm8CD9cSZB8ZCMA1C068WsnfFMOCP8fta4k63SfLTyIPzplIZBDbrEo2IemgxXIZAMYL64qF8PPO2YyGMw05zaZBKIqhNpoegeGStHmeaczwEZCE2QionyZBv2umJtVj8FmBrtmyWbOfFSqJgGXvC1hjKQZDZD'
     }
   },
   methods: {
