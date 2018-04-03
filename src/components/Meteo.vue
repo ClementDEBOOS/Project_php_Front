@@ -17,7 +17,6 @@
         </v-flex>
       </v-layout>
     </v-flex>
-
     <v-flex>
       <v-layout row wrap>
         <v-flex xs12 md4 v-for="n in 3" :key="n" class="padding-5">

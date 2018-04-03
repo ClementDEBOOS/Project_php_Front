@@ -4,7 +4,7 @@
         <v-container grid-list-md fluid>
           <v-layout column wrap>
             <v-flex>
-              <v-carousel hide-controls hide-delimiters id="application" interval="25000">
+              <v-carousel hide-controls hide-delimiters id="application" interval="5000">
                 <v-carousel-item>
                   <informations></informations>
                 </v-carousel-item>
