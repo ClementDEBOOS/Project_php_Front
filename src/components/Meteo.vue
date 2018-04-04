@@ -1,6 +1,5 @@
 <template>
   <v-layout id="meteo" column class="padding-5">
-
     <v-flex>
       <v-layout row wrap>
         <v-flex md4 xs12 text-xs-center text-md-left class="padding-5">
